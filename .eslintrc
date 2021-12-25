@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "overrides": [
+    // Pour utiliser la la config typescript
+    {
+      "files": ["*.ts", "*.tsx"], // fichiers qui matchent
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // chemin de la config
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // or for ignore, 1 for warning, 2 for error
+    "@typescript-eslint/no-unnecessary-condition": 1,
+    "no-console": 1
+  }
+}
